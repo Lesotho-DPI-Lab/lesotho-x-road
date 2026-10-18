@@ -26,7 +26,7 @@
  */
 import { createLanguageHelper as xrdCreateLanguageHelper } from '@niis/shared-ui';
 
-const availableLanguages = ['en']; // Lesotho Exchange: English only for now; add 'st' (Sesotho) once src/locales/st.json and shared-ui st.json exist
+const availableLanguages = ['en']; // Lesotho Data Exchange: English only for now; add 'st' (Sesotho) once src/locales/st.json and shared-ui st.json exist
 
 // Fetches all language-specific messages for the given language
 export async function loadMessages(language: string) {

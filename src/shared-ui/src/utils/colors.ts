@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-// Lesotho Exchange palette (Lesotho flag blue #00209f and green #009543); X-Road enum names kept for upstream compatibility.
+// Lesotho Data Exchange palette (Lesotho flag blue #00209f and green #009543); X-Road enum names kept for upstream compatibility.
 export enum Colors {
   Purple10 = '#e6e9f5',
   Purple20 = '#ccd2ec',
