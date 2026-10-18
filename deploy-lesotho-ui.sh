@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy the Lesotho Exchange-branded admin UI.
+# Deploy the Lesotho Data Exchange-branded admin UI.
 # Usage: sudo ./deploy-lesotho-ui.sh              (deploy Central Server jar)
 #        sudo ./deploy-lesotho-ui.sh rollback     (restore the original Central Server jar)
 #        sudo ./deploy-lesotho-ui.sh ss           (deploy Security Server UI)

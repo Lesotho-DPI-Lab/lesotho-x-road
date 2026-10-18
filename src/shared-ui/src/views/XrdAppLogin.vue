@@ -199,7 +199,7 @@ function addErrors(...errors: string[]) {
 
     .brand-name {
       color: colors.$Purple100;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
       letter-spacing: 0.06em;
       text-transform: uppercase;
