@@ -115,7 +115,15 @@ import ministryLogo from '../assets/ministry_logo.png';
 import { computed, inject } from 'vue';
 import { key } from '../utils';
 
-const ministryLogoUrl = ministryLogo;
+// Each app may pass its owning ministry's logo; defaults to the operator (MICSTI) logo.
+const props = defineProps({
+  ministryLogo: {
+    type: String,
+    default: ministryLogo,
+  },
+});
+
+const ministryLogoUrl = computed(() => props.ministryLogo);
 const currentYear = new Date().getFullYear();
 
 const system = inject(key.system);

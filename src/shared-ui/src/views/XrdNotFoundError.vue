@@ -108,8 +108,8 @@ const routing = inject(key.routing);
 }
 
 .unicorn-gradient {
-  background-color: #f3ec78;
-  background-image: linear-gradient(108deg, #e29ae6 5.28%, #663bdb 94.72%);
+  background-color: colors.$Purple100;
+  background-image: linear-gradient(108deg, colors.$Purple100 5.28%, colors.$Success100 94.72%);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
