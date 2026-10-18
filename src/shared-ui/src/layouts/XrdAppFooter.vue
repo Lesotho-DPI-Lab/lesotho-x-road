@@ -111,11 +111,10 @@
 </template>
 
 <script lang="ts" setup>
-import ministryLogo from '../assets/ministry_logo.png';
+import { ministryLogoUrl } from '../branding';
 import { computed, inject } from 'vue';
 import { key } from '../utils';
 
-const ministryLogoUrl = ministryLogo;
 const currentYear = new Date().getFullYear();
 
 const system = inject(key.system);
