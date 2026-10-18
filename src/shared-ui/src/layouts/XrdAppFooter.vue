@@ -26,12 +26,13 @@
  -->
 <template>
   <v-footer class="footer">
+    <div class="flag-stripe" aria-hidden="true"><span /><span /><span /></div>
     <v-container class="pb-13">
       <v-row>
-        <v-col cols="2" class="pt-4">
-          <v-img :src="xroad7LogoUrl" height="35" width="132" max-height="35" max-width="132"></v-img>
+        <v-col cols="12" md="3" class="pt-4">
+          <img :src="ministryLogoUrl" :alt="$t('branding.ministry')" class="ministry-logo" />
         </v-col>
-        <v-col cols="3" class="footer-col pt-5">
+        <v-col cols="12" sm="4" md="3" class="footer-col pt-5">
           <v-row>
             <v-col>
               <span class="footer-title">
@@ -48,33 +49,59 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
-              <a rel="noopener" class="footer-link" target="_blank" href="https://x-road.global/feedback">
-                {{ $t('footer.software.feedback') }}
-              </a>
+            <v-col class="footer-copyright">
+              {{ $t('footer.copyright.text', { year: currentYear }) }}
             </v-col>
           </v-row>
         </v-col>
-        <v-col class="footer-col pt-5">
+        <v-col cols="12" sm="4" md="3" class="footer-col pt-5">
           <v-row>
             <v-col>
               <span class="footer-title">
-                {{ $t('footer.copyright.title') }}
+                {{ $t('footer.contact.title') }}
               </span>
             </v-col>
           </v-row>
           <v-row>
             <v-col class="py-0">
-              <a rel="noopener" class="footer-link" href="https://niis.org/" target="_blank">
-                {{ $t('footer.copyright.company') }}
-              </a>
+              <div>{{ $t('footer.contact.address') }}</div>
+              <div>
+                {{ $t('footer.contact.phoneLabel') }}:
+                <a class="footer-link" :href="`tel:${$t('footer.contact.phone').replace(/\s/g, '')}`">{{ $t('footer.contact.phone') }}</a>
+              </div>
+              <div>
+                {{ $t('footer.contact.emailLabel') }}:
+                <a class="footer-link" :href="`mailto:${$t('footer.contact.email')}`">{{ $t('footer.contact.email') }}</a>
+              </div>
+              <div>{{ $t('footer.contact.hours') }}</div>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="12" sm="4" md="3" class="footer-col pt-5">
+          <v-row>
+            <v-col>
+              <span class="footer-title">
+                {{ $t('footer.support.title') }}
+              </span>
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
-              <a rel="noopener" class="footer-link" href="https://x-road.global/xroad-licence-info" target="_blank">
-                {{ $t('footer.copyright.licenceInfo') }}
-              </a>
+            <v-col class="py-0">
+              <div>
+                <a rel="noopener" class="footer-link" target="_blank" :href="$t('footer.support.portalUrl')">
+                  {{ $t('footer.support.portal') }}
+                </a>
+              </div>
+              <div>
+                <a class="footer-link" :href="`mailto:${$t('footer.support.email')}`">
+                  {{ $t('footer.support.reportIssue') }}
+                </a>
+              </div>
+              <div>
+                <a rel="noopener" class="footer-link" target="_blank" :href="$t('footer.support.docsUrl')">
+                  {{ $t('footer.support.docs') }}
+                </a>
+              </div>
             </v-col>
           </v-row>
         </v-col>
@@ -84,11 +111,12 @@
 </template>
 
 <script lang="ts" setup>
-import xroad7Logo from '../assets/xroad7_logo.svg';
+import ministryLogo from '../assets/ministry_logo.png';
 import { computed, inject } from 'vue';
 import { key } from '../utils';
 
-const xroad7LogoUrl = xroad7Logo;
+const ministryLogoUrl = ministryLogo;
+const currentYear = new Date().getFullYear();
 
 const system = inject(key.system);
 
@@ -101,7 +129,8 @@ const appInfo = computed(() => system?.version());
 $text-color: colors.$Black100;
 
 .footer {
-  background: colors.$WarmGrey30;
+  background: colors.$WarmGrey10;
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -121,5 +150,39 @@ $text-color: colors.$Black100;
 
 .footer-link {
   color: colors.$Purple100;
+}
+
+.footer-copyright {
+  color: colors.$Black70;
+  font-size: 0.8rem;
+}
+
+.ministry-logo {
+  height: 64px;
+  width: auto;
+  max-width: 100%;
+}
+
+// Lesotho flag bands: blue, white, green
+.flag-stripe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    height: 4px;
+  }
+
+  span:nth-child(1) {
+    background: colors.$Purple100;
+  }
+
+  span:nth-child(2) {
+    background: colors.$White100;
+  }
+
+  span:nth-child(3) {
+    background: colors.$Success100;
+  }
 }
 </style>

@@ -173,7 +173,7 @@
         "pin_incorrect": "Invalid PIN",
         "token_not_available": "Token is not available",
         "token_not_found": "Token is not found",
-        "unknown_member": "X-Road core - signer: Unknown member"
+        "unknown_member": "Lesotho Exchange core - signer: Unknown member"
       }
     },
     "generate_backup_interrupted": "Backup generation has been interrupted",
@@ -205,16 +205,36 @@
     "subsystemName": "Subsystem Name",
     "username": "LIB-Username"
   },
+  "branding": {
+    "country": "Kingdom of Lesotho",
+    "ministry": "Ministry of Information, Communications, Science, Technology and Innovation",
+    "name": "Lesotho Exchange"
+  },
   "footer": {
+    "contact": {
+      "address": "Ministry of ICST&I, P.O. Box 0000, Maseru 100, Lesotho",
+      "email": "info{'@'}example.gov.ls",
+      "emailLabel": "Email",
+      "hours": "Mon–Fri, 08:00–16:30",
+      "phone": "+266 2200 0000",
+      "phoneLabel": "Tel",
+      "title": "Contact"
+    },
     "copyright": {
-      "company": "Nordic Institute for Interoperability Solutions (NIIS)",
-      "licenceInfo": "Licence info",
-      "title": "Copyright"
+      "text": "© {year} Government of Lesotho"
     },
     "software": {
-      "feedback": "Feedback",
       "title": "Software",
-      "versionPrefix": "X-Road"
+      "versionPrefix": "Lesotho Exchange"
+    },
+    "support": {
+      "docs": "User guides",
+      "docsUrl": "https://example.gov.ls/lesotho-exchange/docs",
+      "email": "support{'@'}example.gov.ls",
+      "portal": "Service desk",
+      "portalUrl": "https://example.gov.ls/lesotho-exchange/support",
+      "reportIssue": "Report an issue",
+      "title": "Support"
     }
   },
   "global": {

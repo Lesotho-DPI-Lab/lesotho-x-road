@@ -89,7 +89,7 @@
     "management_request_unknown_type": "Unknown request type",
     "management_service_provider_not_set": "Management service provider not set",
     "member_class_exists": "Member class with the same code already exists.",
-    "member_class_is_in_use": "Cannot delete member class: Found X-Road members belonging to the class. Only classes with no registered members can be deleted.",
+    "member_class_is_in_use": "Cannot delete member class: Found Lesotho Exchange members belonging to the class. Only classes with no registered members can be deleted.",
     "member_class_not_found": "No member class with the specified code found.",
     "member_exists": "Member with the same code already exists.",
     "member_not_found": "No member with the specified code/id found.",
@@ -176,7 +176,7 @@
     }
   },
   "global": {
-    "appTitle": "X-Road Central Server",
+    "appTitle": "Lesotho Exchange Central Server",
     "approve": "Approve",
     "class": "Class",
     "code": "Code",
@@ -293,7 +293,7 @@
     "csIdentification": "Central Server Identification",
     "initialConfiguration": "Initial Configuration",
     "instanceIdentifier": {
-      "info": "X-Road instance code, uniquely identifies this X-Road instance."
+      "info": "Lesotho Exchange instance code, uniquely identifies this Lesotho Exchange instance."
     },
     "notification": "The Central Server initialized! Now continue with the full configuration.",
     "pin": {
@@ -428,7 +428,7 @@
       },
       "subsystems": {
         "addClient": "Add subsystem",
-        "areYouSureDelete": "Are you sure you want to delete the Subsystem {subsystemCode} from the X-Road member {memberId} from the system configuration?",
+        "areYouSureDelete": "Are you sure you want to delete the Subsystem {subsystemCode} from the Lesotho Exchange member {memberId} from the system configuration?",
         "areYouSureUnregister": "Are you sure you want to delete the Subsystem {subsystemCode} from server {serverCode} from the system configuration?",
         "deleteSubsystem": "Delete Subsystem",
         "renameSubsystem": "Rename Subsystem",

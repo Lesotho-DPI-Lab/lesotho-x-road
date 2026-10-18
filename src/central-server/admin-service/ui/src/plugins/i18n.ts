@@ -26,7 +26,7 @@
  */
 import { createLanguageHelper as xrdCreateLanguageHelper } from '@niis/shared-ui';
 
-const availableLanguages = ['en', 'es', 'ru', 'tk', 'pt-BR']; // Added pt-BR (Brazilian Portuguese) to the list of supported languages
+const availableLanguages = ['en']; // Lesotho Exchange: English only for now; add 'st' (Sesotho) once src/locales/st.json and shared-ui st.json exist
 
 // Fetches all language-specific messages for the given language
 export async function loadMessages(language: string) {

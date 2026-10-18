@@ -61,7 +61,7 @@
 
 <script lang="ts" setup>
 import XrdButton from '../components/XrdButton.vue';
-import image404 from '../assets/404.png';
+import image404 from '../assets/404.svg';
 import { inject } from 'vue';
 import { key } from '../utils';
 

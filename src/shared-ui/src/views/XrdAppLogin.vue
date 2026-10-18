@@ -31,7 +31,11 @@
     <v-row no-gutters class="fill-height">
       <v-col cols="3">
         <div class="graphics">
-          <v-img :src="xroad7LargeUrl" height="195" width="144" max-height="195" max-width="144" class="xrd-logo"></v-img>
+          <img :src="coatOfArmsUrl" alt="Coat of arms of Lesotho" class="xrd-logo" />
+          <div class="brand-name">{{ $t('branding.name') }}</div>
+          <div class="brand-country">{{ $t('branding.country') }}</div>
+          <div class="brand-ministry">{{ $t('branding.ministry') }}</div>
+          <div class="flag-stripe" aria-hidden="true"><span /><span /><span /></div>
         </div>
       </v-col>
       <v-col cols="9" align-self="center">
@@ -99,12 +103,12 @@
 </template>
 
 <script lang="ts" setup>
-import xroad7Large from '../assets/xroad7_large.svg';
+import coatOfArms from '../assets/coat_of_arms.png';
 import { computed } from 'vue';
 import { useForm } from 'vee-validate';
 import { XrdLanguageDropdown } from '@niis/shared-ui';
 
-const xroad7LargeUrl = xroad7Large;
+const coatOfArmsUrl = coatOfArms;
 
 const props = defineProps({
   loading: {
@@ -175,13 +179,75 @@ function addErrors(...errors: string[]) {
 
   .graphics {
     height: 100%;
-    max-width: 576px; // width of the backround image
-    background-image: url('../assets/background.png');
-    background-size: cover;
+    max-width: 576px;
+    position: relative;
+    padding: 24px 24px 48px;
+    background: linear-gradient(180deg, colors.$Purple10 0%, colors.$White100 100%);
+    border-right: 1px solid colors.$WarmGrey30;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
+    .xrd-logo {
+      width: 70%;
+      max-width: 260px;
+      height: auto;
+      margin-bottom: 24px;
+    }
+
+    .brand-name {
+      color: colors.$Purple100;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .brand-country {
+      color: colors.$Black70;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .brand-ministry {
+      color: colors.$Black70;
+      font-size: 12px;
+      line-height: 1.4;
+      max-width: 280px;
+      margin-top: 20px;
+    }
+
+    // Lesotho flag bands: blue, white, green
+    .flag-stripe {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        height: 8px;
+      }
+
+      span:nth-child(1) {
+        background: colors.$Purple100;
+      }
+
+      span:nth-child(2) {
+        background: colors.$White100;
+      }
+
+      span:nth-child(3) {
+        background: colors.$Success100;
+      }
+    }
   }
 
   .set-width {

@@ -25,13 +25,13 @@
  * THE SOFTWARE.
  */
 
-// Version 7.0 colors as enum.
+// Lesotho Exchange palette (Lesotho flag blue #00209f and green #009543); X-Road enum names kept for upstream compatibility.
 export enum Colors {
-  Purple10 = '#efebfb',
-  Purple20 = '#e0d8f8',
-  Purple30 = '#d1c4f4',
-  Purple70 = '#9376e6',
-  Purple100 = '#663cdc',
+  Purple10 = '#e6e9f5',
+  Purple20 = '#ccd2ec',
+  Purple30 = '#b3bce2',
+  Purple70 = '#4d63bc',
+  Purple100 = '#00209f',
   Black10 = '#e8e8e8',
   Black30 = '#bcbbbb',
   Black50 = '#908e8e',
@@ -39,15 +39,15 @@ export enum Colors {
   Black100 = '#211e1e',
   White100 = '#ffffff',
   Yellow = '#f2994A',
-  WarmGrey10 = '#f4f3f6',
-  WarmGrey20 = '#eae8ee',
-  WarmGrey30 = '#dedce4',
-  WarmGrey50 = '#c9c6d3',
-  WarmGrey70 = '#b4afc2',
-  WarmGrey100 = '#575169',
+  WarmGrey10 = '#f4f5f8',
+  WarmGrey20 = '#e9ebf0',
+  WarmGrey30 = '#dde0e7',
+  WarmGrey50 = '#c6cad4',
+  WarmGrey70 = '#aeb3c1',
+  WarmGrey100 = '#4f5567',
   Error = '#ec4040',
-  Success100 = '#0cc177',
-  Success10 = '#e6f8f1',
+  Success100 = '#009543',
+  Success10 = '#e5f4ec',
   Background = '#e5e5e5',
   Warning = '#f5a623',
 }

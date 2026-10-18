@@ -104,7 +104,7 @@ export default defineComponent({
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: #dedce4;
+  color: #dde0e7;
   display: flex;
   height: 100%;
   align-items: center;

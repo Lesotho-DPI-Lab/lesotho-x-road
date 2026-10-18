@@ -149,6 +149,6 @@ defineExpose({ focus });
 }
 
 .gradient {
-  background: linear-gradient(270deg, #663cdc 0%, #cd9dc8 99.58%);
+  background: linear-gradient(270deg, #00209f 0%, #4d63bc 99.58%);
 }
 </style>

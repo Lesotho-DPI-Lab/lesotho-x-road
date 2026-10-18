@@ -25,26 +25,65 @@
    THE SOFTWARE.
  -->
 <template>
-  <v-img :src="xrdLogoUrl" height="35" width="132" max-height="35" max-width="132" class="xrd-logo" @click="routing?.toHome()"></v-img>
+  <div class="xrd-logo" data-test="app-logo" @click="routing?.toHome()">
+    <img :src="coatOfArmsUrl" alt="Coat of arms of Lesotho" class="coat-of-arms" />
+    <span class="wordmark">
+      <span class="wordmark-name">{{ $t('branding.name') }}</span>
+      <span class="wordmark-sub">{{ $t('branding.country') }}</span>
+    </span>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import xrdLogo from '../assets/xroad7_logo.svg';
+import coatOfArms from '../assets/coat_of_arms.png';
 import { inject } from 'vue';
 import { key } from '../utils';
 
-const xrdLogoUrl = xrdLogo;
+const coatOfArmsUrl = coatOfArms;
 
 const routing = inject(key.routing);
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/colors';
+
 .xrd-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
+  user-select: none;
   @media only screen and (max-width: 920px) {
     display: none;
+  }
+
+  .coat-of-arms {
+    height: 40px;
+    width: auto;
+  }
+
+  .wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .wordmark-name {
+    color: colors.$Purple100;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+  }
+
+  .wordmark-sub {
+    color: colors.$Black70;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.14em;
   }
 }
 </style>

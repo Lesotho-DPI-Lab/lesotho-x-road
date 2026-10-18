@@ -84,7 +84,7 @@ export default defineComponent({
 
 .alert {
   margin-top: 16px;
-  border: solid 1px #dedce4;
+  border: solid 1px #dde0e7;
   border-radius: 4px;
 }
 
