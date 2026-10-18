@@ -660,7 +660,7 @@
     "undefinedSubsystemName": "undefined"
   },
   "global": {
-    "appTitle": "Lesotho Data Exchange Management Security Server"
+    "appTitle": "Management Security Server"
   },
   "globalAlert": {
     "backupRestoreInProgress": "The Security Server configuration is being restored from a backup. Process started at {startTime}",
