@@ -29,6 +29,7 @@ import { createI18n } from 'vue-i18n';
 import merge from 'deepmerge';
 import { nextTick, Plugin, ref, Ref } from 'vue';
 import axios from 'axios';
+import { brandMinistry } from '../branding';
 
 const defaultLanguage = import.meta.env.VITE_I18N_LOCALE || 'en';
 const defaultFallbackLanguage = import.meta.env.VITE_FALLBACK_LOCALE || defaultLanguage;
@@ -90,7 +91,8 @@ export async function createLanguageHelper(languages: string[], messageLoader: M
 }
 
 async function load(language: string) {
-  const loaders = [loadValidationMessages, loadVuetifyMessages, loadSharedMessages, ...messageLoaders];
+  // Ministry branding text loads last so it overrides the shared and app defaults.
+  const loaders = [loadValidationMessages, loadVuetifyMessages, loadSharedMessages, ...messageLoaders, loadMinistryMessages];
   return Promise.all(loaders.map((loader) => loader(language)))
     .then((msgs) => {
       return msgs;
@@ -133,6 +135,20 @@ async function loadSharedMessages(language: string) {
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('Failed to load shared translations for: ' + language);
+    return {};
+  }
+}
+
+async function loadMinistryMessages(language: string) {
+  if (language !== 'en' || brandMinistry === 'micsti') {
+    return {};
+  }
+  try {
+    const module = await import(`../locales/ministries/${brandMinistry}.json`);
+    return module.default;
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('Failed to load ministry branding for: ' + brandMinistry);
     return {};
   }
 }

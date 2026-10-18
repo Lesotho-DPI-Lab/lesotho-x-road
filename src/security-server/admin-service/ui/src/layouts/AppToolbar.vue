@@ -28,12 +28,16 @@
     class="main-toolbar"
     theme="dark"
     absolute
-    color="#636161"
+    :color="colors.WarmGrey100"
     flat
     height="32"
   >
     <div v-if="authenticated" class="auth-container">
+      <img v-if="showFlag" :src="flagUrl" alt="Flag of Lesotho" class="flag" />
       <div class="server-type">{{ $t('global.appTitle').toUpperCase() }}</div>
+      <div class="ministry" data-test="app-toolbar-ministry">
+        {{ $t('branding.ministry') }}
+      </div>
       <div
         v-show="currentSecurityServer.id"
         class="server-name"
@@ -63,8 +67,12 @@ import { NodeType } from '@/openapi-types';
 import { mapState } from 'pinia';
 import { useUser } from '@/store/modules/user';
 import { useSystem } from '@/store/modules/system';
+import { Colors, flagUrl, showFlag } from '@niis/shared-ui';
 
 export default defineComponent({
+  data() {
+    return { colors: Colors, flagUrl, showFlag };
+  },
   computed: {
     ...mapState(useUser, ['authenticated', 'currentSecurityServer']),
     ...mapState(useSystem, ['securityServerNodeType']),
@@ -82,13 +90,35 @@ export default defineComponent({
   margin-right: 10px;
 }
 
+.flag {
+  height: 16px;
+  width: auto;
+  margin-left: 64px;
+  margin-right: 12px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+  @media only screen and (max-width: 920px) {
+    margin-left: 20px;
+  }
+}
+
 .server-type {
   font-style: normal;
   font-weight: bold;
-  margin-left: 64px;
   user-select: none;
 
   @media only screen and (max-width: 920px) {
+    display: none;
+  }
+}
+
+.ministry {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  user-select: none;
+
+  @media only screen and (max-width: 1100px) {
     display: none;
   }
 }

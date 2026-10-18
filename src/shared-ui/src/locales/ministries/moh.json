@@ -1,0 +1,15 @@
+{
+  "branding": {
+    "ministry": "Ministry of Health"
+  },
+  "footer": {
+    "contact": {
+      "address": "Ministry of Health, P.O. Box 0000, Maseru 100, Lesotho",
+      "email": "info{'@'}health.example.gov.ls",
+      "phone": "+266 2200 0000"
+    },
+    "support": {
+      "email": "support{'@'}health.example.gov.ls"
+    }
+  }
+}
