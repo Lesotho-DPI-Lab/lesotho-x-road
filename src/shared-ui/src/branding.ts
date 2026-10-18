@@ -28,7 +28,7 @@ import micstiLogo from './assets/ministry_logo.png';
 import mohLogo from './assets/ministries/moh_logo.png';
 import lesothoFlag from './assets/lesotho_flag.png';
 
-// Lesotho Exchange: per-server ministry branding, chosen at build time.
+// Lesotho Data Exchange: per-server ministry branding, chosen at build time.
 // VITE_BRAND_MINISTRY selects the footer logo and src/locales/ministries/<key>.json text (default: micsti).
 // VITE_BRAND_SHOW_FLAG=true shows the Lesotho flag in the toolbar.
 const ministryLogos: Record<string, string> = {

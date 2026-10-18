@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy the Lesotho Exchange-branded Security Server admin UI.
+# Deploy the Lesotho Data Exchange-branded Security Server admin UI.
 # Swaps only the UI files (BOOT-INF/classes/public/) inside the installed jar; the backend stays the released build.
 # Build first:  cd src && pnpm install --frozen-lockfile && cd security-server/admin-service/ui && pnpm run build-only
 #               (set VITE_BRAND_MINISTRY=<key> to brand for a ministry other than the .env default)

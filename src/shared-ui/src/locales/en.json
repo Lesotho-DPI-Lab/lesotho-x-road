@@ -173,7 +173,7 @@
         "pin_incorrect": "Invalid PIN",
         "token_not_available": "Token is not available",
         "token_not_found": "Token is not found",
-        "unknown_member": "Lesotho Exchange core - signer: Unknown member"
+        "unknown_member": "Lesotho Data Exchange core - signer: Unknown member"
       }
     },
     "generate_backup_interrupted": "Backup generation has been interrupted",
@@ -208,7 +208,7 @@
   "branding": {
     "country": "Kingdom of Lesotho",
     "ministry": "Ministry of Information, Communications, Science, Technology and Innovation",
-    "name": "Lesotho Exchange"
+    "name": "Lesotho Data Exchange"
   },
   "footer": {
     "contact": {
@@ -225,7 +225,7 @@
     },
     "software": {
       "title": "Software",
-      "versionPrefix": "Lesotho Exchange"
+      "versionPrefix": "Lesotho Data Exchange"
     },
     "support": {
       "docs": "User guides",

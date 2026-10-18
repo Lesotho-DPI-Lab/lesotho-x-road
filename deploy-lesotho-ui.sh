@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy the Lesotho Exchange-branded Central Server admin jar.
+# Deploy the Lesotho Data Exchange-branded Central Server admin jar.
 # Usage: sudo ./deploy-lesotho-ui.sh          (deploy)
 #        sudo ./deploy-lesotho-ui.sh rollback (restore the original X-Road jar)
 set -euo pipefail
