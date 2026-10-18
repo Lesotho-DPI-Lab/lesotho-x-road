@@ -39,7 +39,7 @@
       :success-notifications="notificationStore.successNotifications"
       @close="notificationStore.deleteSuccessNotification($event.timeAdded)"
     />
-    <XrdAppFooter v-if="loginView" />
+    <XrdAppFooter v-if="loginView" :ministry-logo="ministryLogo" />
   </v-app>
 </template>
 
@@ -47,6 +47,7 @@
 import { computed } from 'vue';
 import axios from 'axios';
 import { XrdAppFooter, XrdSnackBar } from '@niis/shared-ui';
+import ministryLogo from '@/assets/ministry_logo.png';
 import AppToolbar from '@/layouts/AppToolbar.vue';
 import { RouteName } from '@/global';
 import { useUser } from '@/store/modules/user';

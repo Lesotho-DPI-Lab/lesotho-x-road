@@ -26,7 +26,7 @@
 
 import { createLanguageHelper as _createLanguageHelper } from '@niis/shared-ui';
 
-const availableLanguages = ['en', 'es', 'et', 'ru', 'tk', 'pt-BR']; // Added support for the pt-BR (Brazilian Portuguese) language
+const availableLanguages = ['en']; // Lesotho Exchange: English only for now; add 'st' (Sesotho) once src/locales/st.json and shared-ui st.json exist
 
 export async function createLanguageHelper() {
   return _createLanguageHelper(availableLanguages, loadMessages);
